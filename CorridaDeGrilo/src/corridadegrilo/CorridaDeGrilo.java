@@ -5,9 +5,11 @@
  */
 package corridadegrilo;
 
+import java.util.Scanner;
+
 /**
  *
- * @author marce
+ * @author Gustavo Eliseu, Lucas, Marcelino
  */
 public class CorridaDeGrilo {
 
@@ -16,6 +18,15 @@ public class CorridaDeGrilo {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        //pegando os inputs
+            //pegando a quantidade de grilos
+        System.out.print("Quantos grilos devem correr? ");
+        Scanner scan = new Scanner(System.in);
+        int quantGrilos = scan.nextInt();
+            //pegando a posição da linha de chegada
+        System.out.print("Qual a distancia para a chegada? ");
+        int distanciaTotal = scan.nextInt();
+        
+        //
     }
-    
 }
