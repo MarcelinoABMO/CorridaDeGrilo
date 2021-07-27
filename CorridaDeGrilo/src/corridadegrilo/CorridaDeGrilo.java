@@ -28,5 +28,9 @@ public class CorridaDeGrilo {
         int distanciaTotal = scan.nextInt();
         
         //
+        
+        //imprimir o resultado final
+        System.out.println("\nResultado Final:");
+        //
     }
 }
