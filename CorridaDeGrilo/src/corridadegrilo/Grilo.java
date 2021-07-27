@@ -2,7 +2,7 @@ package corridadegrilo;
 
 import java.util.Random;
 
-public class Grilo{
+public class Grilo extends Thread{
     
     private Random  random = new Random();
     private int posicao;
@@ -13,6 +13,17 @@ public class Grilo{
     
     }
     
+	@Override public void run()
+	{
+		//
+		while(true)
+		{
+			Pulo();
+			
+			Thread.sleep(x);
+		}
+	}
+	
     void Pulo(){
         int pegaPulo = random.nextInt(10);
         posicao += pegaPulo;
