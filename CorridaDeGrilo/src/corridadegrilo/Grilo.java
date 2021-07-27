@@ -8,10 +8,11 @@ public class Grilo extends Thread{
     private int posicao;
     private int indice;
     private int speed = 500;
-	private int distanciaMax;
+private int distanciaMax;
     
-    public Grilo(int index){
+    public Grilo(int index, int distanciaMax){
         this.indice = index;
+		this.distanciaMax = distanciaMax;
     
     }
     
