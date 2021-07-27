@@ -33,7 +33,7 @@ public class CorridaDeGrilo {
         Grilo[] grilos = new Grilo[quantGrilos];
         for (int i = 0; i < quantGrilos; i++)
         {
-            grilos[i] = new Grilo(i);
+            grilos[i] = new Grilo((i+1), distanciaTotal);
         }
         
         for (Grilo g : grilos)
@@ -50,6 +50,9 @@ public class CorridaDeGrilo {
         
         //imprimir o resultado final
         System.out.println("\nResultado Final:");
-        //
+        for (int i = 0; i < quantGrilos; i++)
+        {
+            System.out.println("O Grilo " + (i+1) + " percorreu " + grilos[i].getPosicao() + "cm em " + grilos[i].getPulos() );
+        }
     }
 }
