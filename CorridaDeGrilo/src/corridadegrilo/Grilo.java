@@ -7,6 +7,7 @@ public class Grilo extends Thread{
     private Random  random = new Random();
     private int posicao;
     private int indice;
+	private int speed = 500;
     
     public Grilo(int index){
         this.indice = index;
@@ -20,7 +21,12 @@ public class Grilo extends Thread{
 		{
 			Pulo();
 			
-			Thread.sleep(x);
+			try
+			{
+				Thread.sleep(speed);
+			} catch (InterruptedException ex){
+				System.out.println(“deu merda no sleep da thread”);
+			}
 		}
 	}
 	
