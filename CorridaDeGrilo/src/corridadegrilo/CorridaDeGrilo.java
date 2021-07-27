@@ -6,6 +6,8 @@
 package corridadegrilo;
 
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -28,6 +30,23 @@ public class CorridaDeGrilo {
         int distanciaTotal = scan.nextInt();
         
         //
+        Grilo[] grilos = new Grilo[quantGrilos];
+        for (int i = 0; i < quantGrilos; i++)
+        {
+            grilos[i] = new Grilo(i);
+        }
+        
+        for (Grilo g : grilos)
+            g.start();
+        
+        for (Grilo g : grilos)
+        {
+            try {
+                g.join();
+            } catch (InterruptedException ex) {
+                System.out.println("Deu merda no join das threads.");
+            }
+        }
         
         //imprimir o resultado final
         System.out.println("\nResultado Final:");
