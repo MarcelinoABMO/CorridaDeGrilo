@@ -8,6 +8,7 @@ public class Grilo extends Thread{
     private int posicao;
     private int indice;
     private int speed = 500;
+	private int distanciaMax;
     
     public Grilo(int index){
         this.indice = index;
@@ -17,7 +18,7 @@ public class Grilo extends Thread{
     @Override public void run()
     {
         //
-        while(true)
+        while(posicao < distanciaMax)
         {
                 Pulo();
 
