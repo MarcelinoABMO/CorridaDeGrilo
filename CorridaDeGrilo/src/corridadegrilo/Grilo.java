@@ -6,9 +6,13 @@ public class Grilo extends Thread{
     
     private Random random = new Random();
     private int posicao;
+	public int getPosicao() { return this.posicao; }
     private int indice;
     private int speed = 500;
 	private int distanciaMax;
+	private int pulos;
+	public int getPulos() { return this.pulos; }
+
     
     public Grilo(int index, int distanciaMax){
         this.indice = index;
@@ -35,6 +39,7 @@ public class Grilo extends Thread{
     void Pulo(){
         int pegaPulo = random.nextInt(10);
         posicao += pegaPulo;
+		pulos++;
         
         System.out.println("O grilo " + indice + " pulou " + pegaPulo + "cm e ja percorreu " + posicao + "cm");
     }
