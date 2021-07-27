@@ -6,17 +6,17 @@ public class Grilo extends Thread{
     
     private Random random = new Random();
     private int posicao;
-	public int getPosicao() { return this.posicao; }
+    public int getPosicao() { return this.posicao; }
     private int indice;
     private int speed = 500;
-	private int distanciaMax;
-	private int pulos;
-	public int getPulos() { return this.pulos; }
+    private int distanciaMax;
+    private int pulos;
+    public int getPulos() { return this.pulos; }
 
     
     public Grilo(int index, int distanciaMax){
         this.indice = index;
-		this.distanciaMax = distanciaMax;
+	this.distanciaMax = distanciaMax;
     
     }
     
@@ -25,22 +25,22 @@ public class Grilo extends Thread{
         //
         while(posicao < distanciaMax)
         {
-                Pulo();
+            Pulo();
 
-                try
-                {
-                        Thread.sleep(speed);
-                } catch (InterruptedException ex){
-                        System.out.println("deu merda no sleep da thread");
-                }
+            try
+            {
+                    Thread.sleep(speed);
+            } catch (InterruptedException ex){
+                    System.out.println("deu merda no sleep da thread");
+            }
         }
     }
 	
     void Pulo(){
         int pegaPulo = random.nextInt(10);
         posicao += pegaPulo;
-		pulos++;
+	pulos++;
         
-        System.out.println("O grilo " + indice + " pulou " + pegaPulo + "cm e ja percorreu " + posicao + "cm");
+        System.out.println("O Grilo_" + indice + " pulou " + pegaPulo + "cm e ja percorreu " + posicao + "cm");
     }
 }

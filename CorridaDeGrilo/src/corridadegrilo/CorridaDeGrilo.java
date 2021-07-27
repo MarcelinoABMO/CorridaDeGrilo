@@ -52,7 +52,7 @@ public class CorridaDeGrilo {
         System.out.println("\nResultado Final:");
         for (int i = 0; i < quantGrilos; i++)
         {
-            System.out.println("O Grilo " + (i+1) + " percorreu " + grilos[i].getPosicao() + "cm em " + grilos[i].getPulos() );
+            System.out.println("O Grilo_" + (i+1) + " percorreu um total de " + grilos[i].getPosicao() + "cm com " + grilos[i].getPulos() );
         }
     }
 }
