@@ -15,11 +15,8 @@ import java.util.logging.Logger;
  */
 public class CorridaDeGrilo {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+        
         //pegando os inputs
             //pegando a quantidade de grilos
         System.out.print("Quantos grilos devem correr? ");
@@ -29,16 +26,18 @@ public class CorridaDeGrilo {
         System.out.print("Qual a distancia para a chegada? ");
         int distanciaTotal = scan.nextInt();
         
-        //
+        //instanciando os grilos e armazenando em um array
         Grilo[] grilos = new Grilo[quantGrilos];
         for (int i = 0; i < quantGrilos; i++)
         {
             grilos[i] = new Grilo((i+1), distanciaTotal);
         }
         
+        //executando as threads
         for (Grilo g : grilos)
             g.start();
         
+        //aguardando as threads terminarem
         for (Grilo g : grilos)
         {
             try {
@@ -48,11 +47,12 @@ public class CorridaDeGrilo {
             }
         }
         
-        //imprimir o resultado final
+        //imprimindo o resultado final
         System.out.println("\nResultado Final:");
         for (int i = 0; i < quantGrilos; i++)
         {
-            System.out.println("O Grilo_" + (i+1) + " percorreu um total de " + grilos[i].getPosicao() + "cm com " + grilos[i].getPulos() );
+            System.out.println("O Grilo_" + (i+1) + " percorreu um total de " +
+                    grilos[i].getPosicao() + "cm com " + grilos[i].getPulos() );
         }
     }
 }
